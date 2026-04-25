@@ -5,4 +5,5 @@
 
 USE proc_lab;
 
--- TODO: two queries or one subquery; no hard-coded numbers from the seed
+SET @code := (SELECT MIN(balance) * MAX(balance) FROM accounts);
+SELECT @code AS secret_code;
